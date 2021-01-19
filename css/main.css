@@ -58,6 +58,10 @@ body, .site-nav__list, .contacts, .features__list, .activity__list, .team__list,
   height: auto;
 }
 
+ul {
+  list-style: none;
+}
+
 .title-hidden {
   position: absolute;
   width: 1px;
@@ -70,10 +74,6 @@ body, .site-nav__list, .contacts, .features__list, .activity__list, .team__list,
           clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
-}
-
-ul {
-  list-style: none;
 }
 
 .container {
