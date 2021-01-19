@@ -1,17 +1,33 @@
 .footer {
-  background-color: $hero-footer-background-color;
-}
-.footer__container {
-  display: flex;
- align-items: baseline;
   padding-top: 60px;
   padding-bottom: 60px;
-
+  background-color: $hero-footer-background-color;
+  text-align: center;
+}
+.footer__container {
   margin-left: auto;
   margin-right: auto;
-  width: 1200px;
+
   padding-left: 15px;
   padding-right: 15px;
+
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: center;
+    width: 768px;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 1200px;
+  }
 }
 
 .footer__contacts-container {
@@ -19,11 +35,12 @@
 }
 .footer__adress {
   @extend %ul;
-  @extend %margin-padding-none;
+  padding: 0;
+  margin-top: 20px;
+  margin-bottom: 0;
 }
 .footer__adress-link {
   display: block;
-  margin-top: 20px;
 
   color: $title-button-white-color;
 
@@ -61,8 +78,15 @@
 /*Social-box*/
 
 .social-box {
- margin-left: 70px;
-  min-width: 207px; 
+  margin-top: 60px;
+
+  @media screen and (min-width: 768px) {
+    margin-top: 0;
+    margin-left: 165px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-left: 0;
+  }
 }
 
 .social-box__subtitle {
@@ -79,9 +103,10 @@
   color: $title-button-white-color;
 }
 .social-box__list {
-    display: flex;
-    @extend %ul;
-    @extend %margin-padding-none;
+  display: flex;
+  justify-content: center;
+  @extend %ul;
+  @extend %margin-padding-none;
 }
 .social-box__item {
   margin-right: 10px;
@@ -121,16 +146,25 @@
 /*Footer-form*/
 
 .footer-form {
-  margin-left: 93px;
+  margin-top: 60px;
+
+  @media screen and (min-width: 1200px) {
+    margin-top: 0;
+  }
 }
 
 .footer-form__form {
   display: flex;
-  justify-content: center;
-  align-items: baseline;
+  flex-direction: column;
+  align-items: center;
 
   margin: 0;
   padding: 0;
+
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+    align-items: baseline;
+  }
 }
 
 .footer-form__label {
@@ -149,11 +183,17 @@
 }
 
 .footer-form__field {
-    
   position: relative;
+  width: 100%;
+  @media screen and (min-width: 480px) {
+    width: 450px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 358px;
+  }
 }
 .footer-form__input {
-  width: 358px;
+  width: 100%;
   height: 50px;
   padding: 15px 16px 15px 70px;
 
@@ -167,8 +207,8 @@
 }
 
 .footer-form__title {
-    margin-top: 0;
-    margin-bottom: 20px;
+  margin-top: 0;
+  margin-bottom: 20px;
   font-weight: bold;
   font-size: 14px;
   line-height: 1.14;
@@ -180,7 +220,7 @@
 .footer-form__btn {
   @extend %display-flex-centre;
 
-  margin-left: 12px;
+  margin-top: 20px;
   padding: 0;
   width: 200px;
   height: 50px;
@@ -201,6 +241,11 @@
   border-radius: 4px;
 
   cursor: pointer;
+
+  @media screen and (min-width: 1200px) {
+    margin-top: 0;
+    margin-left: 12px;
+  }
 }
 
 .footer-form__icon {

@@ -25,41 +25,64 @@
             ><span class="logo__first-label">Web</span
             ><span class="logo__second-label">Studio</span></a
           >
-          <ul class="site-nav__list">
-            <li class="site-nav__item">
-              <a href="./index.html" class="site-nav__link">Студия</a>
-            </li>
-            <li class="site-nav__item">
-              <a
-                href="./portfolio.html"
-                class="site-nav__link site-nav__link--portfolio-active"
-                >Портфолио</a
-              >
-            </li>
-            <li class="site-nav__item">
-              <a href="" class="site-nav__link">Контакты</a>
-            </li>
-          </ul>
-        </nav>
+          <button
+            type="button"
+            class="button-menu"
+            aria-expanded="false"
+            aria-controls="menu-container"
+            data-menu-button
+          >
+            <svg
+              class="button-menu__icon"
+              aria-label="Переключатель мобильного меню"
+            >
+              <use
+                class="button-menu__icon-cross"
+                href="./images/icon/symbol-defs-1.svg#modal-close-comp"
+              ></use>
+              <use
+                class="button-menu__icon-menu"
+                href="./images/icon/symbol-defs-toodey.svg#menu_24px"
+              ></use>
+            </svg>
+          </button>
+          <div class="menu-container" id="menu-container" data-menu>
+            <ul class="site-nav__list">
+              <li class="site-nav__item">
+                <a href="./index.html" class="site-nav__link">Студия</a>
+              </li>
+              <li class="site-nav__item">
+                <a
+                  href="./portfolio.html"
+                  class="site-nav__link site-nav__link--portfolio-active"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="site-nav__item">
+                <a href="" class="site-nav__link">Контакты</a>
+              </li>
+            </ul>
 
-        <ul class="contacts">
-          <li class="contacts__item">
-            <a class="contacts__link" href="">
-              <svg class="contacts__mail-icon">
-                <use href="./images/symbol-defs.svg#envelope"></use>
-              </svg>
-              info@devstudio.com</a
-            >
-          </li>
-          <li class="contacts__item">
-            <a class="contacts__link" href="">
-              <svg class="contacts__tel-icon">
-                <use href="./images/symbol-defs.svg#smartphone"></use>
-              </svg>
-              +38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+            <ul class="contacts">
+              <li class="contacts__item">
+                <a class="contacts__link" href="">
+                  <svg class="contacts__mail-icon">
+                    <use href="./images/symbol-defs.svg#envelope"></use>
+                  </svg>
+                  info@devstudio.com</a
+                >
+              </li>
+              <li class="contacts__item">
+                <a class="contacts__link" href="">
+                  <svg class="contacts__tel-icon">
+                    <use href="./images/symbol-defs.svg#smartphone"></use>
+                  </svg>
+                  +38 096 111 11 11</a
+                >
+              </li>
+            </ul>
+          </div>
+        </nav>
       </div>
     </header>
 
@@ -98,13 +121,40 @@
             <li class="galery__card">
               <a href="" class="galery__link">
                 <div class="galery__thumb">
-                  <img
-                    class="image"
-                    src="./images/1techno-75.jpg"
-                    alt="Технокряк"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/adaptive-img/img-portfolio-1-450.jpg    1x,
+                        ./images/adaptive-img/img-portfolio-1-450@2x.jpg 2x,
+                        ./images/adaptive-img/img-portfolio-1-450@3x.jpg 3x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/adaptive-img/img-portfolio-1-370.jpg    1x,
+                        ./images/adaptive-img/img-portfolio-1-370@2x.jpg 2x,
+                        ./images/adaptive-img/img-portfolio-1-370@3x.jpg 3x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/adaptive-img/img-portfolio-1-354.jpg    1x,
+                        ./images/adaptive-img/img-portfolio-1-354@2x.jpg 2x,
+                        ./images/adaptive-img/img-portfolio-1-354@3x.jpg 3x
+                      "
+                      media="(min-width: 768px)"
+                    />
+
+                    <img
+                      class="image"
+                      src="./images/adaptive-img/img-portfolio-1-450.jpg"
+                      alt="Технокряк"
+                      width="450"
+                    />
+                  </picture>
+
                   <div class="galery__overley">
                     <p class="galery__subtitle">
                       Технокряк это современная площадка распространения
@@ -124,13 +174,40 @@
             <li class="galery__card">
               <a href="" class="galery__link">
                 <div class="galery__thumb">
-                  <img
-                    class="image"
-                    src="./images/2goldenstar-75.jpg"
-                    alt="Постер New Orlean vs Golden Star"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/adaptive-img/img-portfolio-2-450.jpg    1x,
+                        ./images/adaptive-img/img-portfolio-2-450@2x.jpg 2x,
+                        ./images/adaptive-img/img-portfolio-2-450@3x.jpg 3x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/adaptive-img/img-portfolio-2-370.jpg    1x,
+                        ./images/adaptive-img/img-portfolio-2-370@2x.jpg 2x,
+                        ./images/adaptive-img/img-portfolio-2-370@3x.jpg 3x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/adaptive-img/img-portfolio-2-354.jpg    1x,
+                        ./images/adaptive-img/img-portfolio-2-354@2x.jpg 2x,
+                        ./images/adaptive-img/img-portfolio-2-354@3x.jpg 3x
+                      "
+                      media="(min-width: 768px)"
+                    />
+
+                    <img
+                      class="image"
+                      src="./images/adaptive-img/img-portfolio-2-450.jpg"
+                      alt="Постер New Orlean vs Golden Star"
+                      width="450"
+                    />
+                  </picture>
+                  
                   <div class="galery__overley">
                     <p class="galery__subtitle">
                       Технокряк это современная площадка распространения
@@ -151,13 +228,40 @@
             <li class="galery__card">
               <a href="" class="galery__link">
                 <div class="galery__thumb">
-                  <img
-                    class="image"
-                    src="./images/3seafood-75.jpg"
-                    alt="Seafood"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/adaptive-img/img-portfolio-3-450.jpg    1x,
+                        ./images/adaptive-img/img-portfolio-3-450@2x.jpg 2x,
+                        ./images/adaptive-img/img-portfolio-3-450@3x.jpg 3x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/adaptive-img/img-portfolio-3-370.jpg    1x,
+                        ./images/adaptive-img/img-portfolio-3-370@2x.jpg 2x,
+                        ./images/adaptive-img/img-portfolio-3-370@3x.jpg 3x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/adaptive-img/img-portfolio-3-354.jpg    1x,
+                        ./images/adaptive-img/img-portfolio-3-354@2x.jpg 2x,
+                        ./images/adaptive-img/img-portfolio-3-354@3x.jpg 3x
+                      "
+                      media="(min-width: 768px)"
+                    />
+
+                    <img
+                      class="image"
+                      src="./images/adaptive-img/img-portfolio-3-450.jpg"
+                      alt="Seafood"
+                      width="450"
+                    />
+                  </picture>
+                  
                   <div class="galery__overley">
                     <p class="galery__subtitle">
                       Технокряк это современная площадка распространения
@@ -176,13 +280,40 @@
             <li class="galery__card">
               <a href="" class="galery__link">
                 <div class="galery__thumb">
-                  <img
-                    class="image"
-                    src="./images/4prime-75.jpg"
-                    alt="Prime"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/adaptive-img/img-portfolio-4-450.jpg    1x,
+                        ./images/adaptive-img/img-portfolio-4-450@2x.jpg 2x,
+                        ./images/adaptive-img/img-portfolio-4-450@3x.jpg 3x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/adaptive-img/img-portfolio-4-370.jpg    1x,
+                        ./images/adaptive-img/img-portfolio-4-370@2x.jpg 2x,
+                        ./images/adaptive-img/img-portfolio-4-370@3x.jpg 3x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/adaptive-img/img-portfolio-4-354.jpg    1x,
+                        ./images/adaptive-img/img-portfolio-4-354@2x.jpg 2x,
+                        ./images/adaptive-img/img-portfolio-4-354@3x.jpg 3x
+                      "
+                      media="(min-width: 768px)"
+                    />
+
+                    <img
+                      class="image"
+                      src="./images/adaptive-img/img-portfolio-4-450.jpg"
+                      alt="Prime"
+                      width="450"
+                    />
+                  </picture>
+                  
                   <div class="galery__overley">
                     <p class="galery__subtitle">
                       Технокряк это современная площадка распространения
@@ -201,13 +332,40 @@
             <li class="galery__card">
               <a href="" class="galery__link">
                 <div class="galery__thumb">
-                  <img
-                    class="image"
-                    src="./images/5box-75.jpg"
-                    alt="Boxes"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/adaptive-img/img-portfolio-5-450.jpg    1x,
+                        ./images/adaptive-img/img-portfolio-5-450@2x.jpg 2x,
+                        ./images/adaptive-img/img-portfolio-5-450@3x.jpg 3x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/adaptive-img/img-portfolio-5-370.jpg    1x,
+                        ./images/adaptive-img/img-portfolio-5-370@2x.jpg 2x,
+                        ./images/adaptive-img/img-portfolio-5-370@3x.jpg 3x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/adaptive-img/img-portfolio-5-354.jpg    1x,
+                        ./images/adaptive-img/img-portfolio-5-354@2x.jpg 2x,
+                        ./images/adaptive-img/img-portfolio-5-354@3x.jpg 3x
+                      "
+                      media="(min-width: 768px)"
+                    />
+
+                    <img
+                      class="image"
+                      src="./images/adaptive-img/img-portfolio-5-450.jpg"
+                      alt="Boxes"
+                      width="450"
+                    />
+                  </picture>
+                  
                   <div class="galery__overley">
                     <p class="galery__subtitle">
                       Технокряк это современная площадка распространения
@@ -226,13 +384,40 @@
             <li class="galery__card">
               <a href="" class="galery__link">
                 <div class="galery__thumb">
-                  <img
-                    class="image"
-                    src="./images/6no-borders-75.jpg"
-                    alt="Inspiration has no Borders"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/adaptive-img/img-portfolio-6-450.jpg    1x,
+                        ./images/adaptive-img/img-portfolio-6-450@2x.jpg 2x,
+                        ./images/adaptive-img/img-portfolio-6-450@3x.jpg 3x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/adaptive-img/img-portfolio-6-370.jpg    1x,
+                        ./images/adaptive-img/img-portfolio-6-370@2x.jpg 2x,
+                        ./images/adaptive-img/img-portfolio-6-370@3x.jpg 3x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/adaptive-img/img-portfolio-6-354.jpg    1x,
+                        ./images/adaptive-img/img-portfolio-6-354@2x.jpg 2x,
+                        ./images/adaptive-img/img-portfolio-6-354@3x.jpg 3x
+                      "
+                      media="(min-width: 768px)"
+                    />
+
+                    <img
+                      class="image"
+                      src="./images/adaptive-img/img-portfolio-6-450.jpg"
+                      alt="Inspiration has no Borders"
+                      width="450"
+                    />
+                  </picture>
+                  
                   <div class="galery__overley">
                     <p class="galery__subtitle">
                       Технокряк это современная площадка распространения
@@ -253,13 +438,40 @@
             <li class="galery__card">
               <a href="" class="galery__link">
                 <div class="galery__thumb">
-                  <img
-                    class="image"
-                    src="./images/7limited-edition-75.jpg"
-                    alt="Издание Limited Edition"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/adaptive-img/img-portfolio-7-450.jpg    1x,
+                        ./images/adaptive-img/img-portfolio-7-450@2x.jpg 2x,
+                        ./images/adaptive-img/img-portfolio-7-450@3x.jpg 3x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/adaptive-img/img-portfolio-7-370.jpg    1x,
+                        ./images/adaptive-img/img-portfolio-7-370@2x.jpg 2x,
+                        ./images/adaptive-img/img-portfolio-7-370@3x.jpg 3x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/adaptive-img/img-portfolio-7-354.jpg    1x,
+                        ./images/adaptive-img/img-portfolio-7-354@2x.jpg 2x,
+                        ./images/adaptive-img/img-portfolio-7-354@3x.jpg 3x
+                      "
+                      media="(min-width: 768px)"
+                    />
+
+                    <img
+                      class="image"
+                      src="./images/adaptive-img/img-portfolio-7-450.jpg"
+                      alt="Limited Edition"
+                      width="450"
+                    />
+                  </picture>
+                 
                   <div class="galery__overley">
                     <p class="galery__subtitle">
                       Технокряк это современная площадка распространения
@@ -278,13 +490,40 @@
             <li class="galery__card">
               <a href="" class="galery__link">
                 <div class="galery__thumb">
-                  <img
-                    class="image"
-                    src="./images/8lab-75.jpg"
-                    alt="Проект LAB"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/adaptive-img/img-portfolio-8-450.jpg    1x,
+                        ./images/adaptive-img/img-portfolio-8-450@2x.jpg 2x,
+                        ./images/adaptive-img/img-portfolio-8-450@3x.jpg 3x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/adaptive-img/img-portfolio-8-370.jpg    1x,
+                        ./images/adaptive-img/img-portfolio-8-370@2x.jpg 2x,
+                        ./images/adaptive-img/img-portfolio-8-370@3x.jpg 3x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/adaptive-img/img-portfolio-8-354.jpg    1x,
+                        ./images/adaptive-img/img-portfolio-8-354@2x.jpg 2x,
+                        ./images/adaptive-img/img-portfolio-8-354@3x.jpg 3x
+                      "
+                      media="(min-width: 768px)"
+                    />
+
+                    <img
+                      class="image"
+                      src="./images/adaptive-img/img-portfolio-8-450.jpg"
+                      alt="LAB-project"
+                      width="450"
+                    />
+                  </picture>
+                  
                   <div class="galery__overley">
                     <p class="galery__subtitle">
                       Технокряк это современная площадка распространения
@@ -303,13 +542,40 @@
             <li class="galery__card">
               <a href="" class="galery__link">
                 <div class="galery__thumb">
-                  <img
-                    class="image"
-                    src="./images/9growing-75.jpg"
-                    alt="Growing Busines"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/adaptive-img/img-portfolio-9-450.jpg    1x,
+                        ./images/adaptive-img/img-portfolio-9-450@2x.jpg 2x,
+                        ./images/adaptive-img/img-portfolio-9-450@3x.jpg 3x
+                      "
+                      media="(max-width: 767px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/adaptive-img/img-portfolio-9-370.jpg    1x,
+                        ./images/adaptive-img/img-portfolio-9-370@2x.jpg 2x,
+                        ./images/adaptive-img/img-portfolio-9-370@3x.jpg 3x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/adaptive-img/img-portfolio-9-354.jpg    1x,
+                        ./images/adaptive-img/img-portfolio-9-354@2x.jpg 2x,
+                        ./images/adaptive-img/img-portfolio-9-354@3x.jpg 3x
+                      "
+                      media="(min-width: 768px)"
+                    />
+
+                    <img
+                      class="image"
+                      src="./images/adaptive-img/img-portfolio-9-450.jpg"
+                      alt="Growing Busines"
+                      width="450"
+                    />
+                  </picture>
+                  
                   <div class="galery__overley">
                     <p class="galery__subtitle">
                       Технокряк это современная площадка распространения
@@ -335,7 +601,7 @@
     <footer class="footer">
       <div class="footer__container">
         <div class="footer__contacts-container">
-          <a href="" class="logo"
+          <a href="" class="logo logo--inverce"
             ><span class="logo__first-label">Web</span
             ><span class="logo__second-label logo__second-label--inverce"
               >Studio</span
@@ -426,5 +692,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
