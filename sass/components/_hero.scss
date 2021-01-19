@@ -82,7 +82,7 @@
         $hero-linear-gradient,
         $hero-linear-gradient
       ),
-      url('../images/adaptive-img/img-hero-1600.jpg');
+      url('../images/adaptive-img/header-hero-1600.jpg');
     
   }
   @media screen and (min-device-pixel-ratio: 2),
@@ -93,7 +93,7 @@
           $hero-linear-gradient,
           $hero-linear-gradient
         ),
-        url('../images/adaptive-img/img-hero-1600@2x.jpg');
+        url('../images/adaptive-img/header-hero-1600@2x.jpg');
     }
   }
   @media screen and (min-device-pixel-ratio: 3),
@@ -104,7 +104,7 @@
           $hero-linear-gradient,
           $hero-linear-gradient
         ),
-        url('../images/adaptive-img/img-hero-1600@3x.jpg');
+        url('../images/adaptive-img/header-hero-1600@3x.jpg');
     }
   }
 }
